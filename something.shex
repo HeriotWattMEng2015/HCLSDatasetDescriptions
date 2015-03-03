@@ -1,0 +1,111 @@
+<SummaryLevelShape>{
+    rdf:type dctypes:Dataset,    ###
+    dct:title rdf:langString,    ###
+    dct:alternative rdf:langString?,    ###
+    dct:description rdf:langString,    ###
+    dct:publisher IRI,    ###
+    foaf:page IRI,    ###SHOULD###
+    schemaorg:logo IRI,    ###SHOULD###
+    dct:license IRI?,    ###
+    dct:rights rdf:langString?,    ###
+    dcat:theme IRI of type skos:Concept?,    ###
+    dcat:keyword xsd:string?,    ###
+    dct:references IRI?,    ###
+    cito:citesAsAuthority IRI?,    ###
+    rdfs:seeAlso IRI?,    ###
+    dct:hasPart IRI?,    ###
+    idot:preferredPrefix xsd:string?,    ###
+    idot:alternatePrefix xsd:string?,    ###
+    pav:hasCurrentVersion IRI?,    ###
+    dct:accrualPeriodicity IRI of type dctypes:Frequency,    ###SHOULD###
+    dcat:accessURL IRI?,    ###
+    void:sparqlEndpoint IRI,    ###SHOULD###
+}
+<VersionLevelShape>{
+    rdf:type dctypes:Dataset,
+    dct:title rdf:langString,
+    dct:alternative rdf:langString?,
+    dct:description rdf:langString,
+    dct:creator or pav:createdBy IRI,
+    dct:contributor or pav:authoredBy or pav:curatedBy IRI?,
+    dct:created or pav:createdOn rdfs:Literal encoded using the relevant ISO 8601 Date and Time compliant string and typed using the appropriate XML Schema datatype,
+    pav:authoredOn or pav:curatedOn xsd:dateTime, xsd:date, xsd:gYearMonth, or xsd:gYear?,
+    dct:publisher IRI,
+    dct:issued rdfs:Literal encoded using the relevant ISO 8601 Date and Time compliant string and typed using the appropriate XML Schema datatype,
+    foaf:page IRI,
+    schemaorg:logo IRI,
+    dct:license IRI,
+    dct:rights rdf:langString?,
+    dct:language http://lexvo.org/id/iso639-3/{tag},
+    dcat:theme IRI of type skos:Concept?,
+    dcat:keyword xsd:string?,
+    dct:conformsTo IRI?,
+    dct:references IRI?,
+    cito:citesAsAuthority IRI?,
+    rdfs:seeAlso IRI?,
+    dct:hasPart IRI?,
+    idot:preferredPrefix xsd:string?,
+    idot:alternatePrefix xsd:string?,
+    pav:version xsd:string,
+    dct:isVersionOf IRI,
+    pav:previousVersion IRI,
+    dct:source or pav:retrievedFrom or prov:wasDerivedFrom or pav:createdWith IRI,
+    dcat:distribution IRI of Distribution Level description,
+    dcat:landingPage IRI?,
+    dcat:accessURL IRI?,
+}
+<DistributionLevelShape>{
+    rdf:type dctypes:Dataset,
+    rdf:type void:Dataset or dcat:Distribution,
+    dct:title rdf:langString,
+    dct:alternative rdf:langString?,
+    dct:description rdf:langString,
+    dct:creator or pav:createdBy IRI,
+    dct:contributor or pav:authoredBy or pav:curatedBy IRI?,
+    dct:created or pav:createdOn rdfs:Literal encoded using the relevant ISO 8601 Date and Time compliant string and typed using the appropriate XML Schema datatype,
+    pav:authoredOn or pav:curatedOn xsd:dateTime, xsd:date, xsd:gYearMonth, or xsd:gYear?,
+    dct:publisher IRI,
+    dct:issued rdfs:Literal encoded using the relevant ISO 8601 Date and Time compliant string and typed using the appropriate XML Schema datatype,
+    foaf:page IRI,
+    schemaorg:logo IRI,
+    dct:license IRI,
+    dct:rights rdf:langString?,
+    dct:language http://lexvo.org/id/iso639-3/{tag},
+    dcat:theme IRI of type skos:Concept?,
+    dcat:keyword xsd:string?,
+    void:vocabulary IRI,
+    dct:conformsTo IRI,
+    dct:references IRI?,
+    cito:citesAsAuthority IRI?,
+    rdfs:seeAlso IRI?,
+    idot:preferredPrefix xsd:string?,
+    idot:alternatePrefix xsd:string?,
+    idot:identifierPattern xsd:string?,
+    void:uriRegexPattern xsd:string?,
+    idot:accessPattern idot:AccessPattern?,
+    idot:exampleIdentifier xsd:string,
+    void:exampleResource IRI,
+    sio:has-data-item IRI?,
+    pav:version xsd:string,
+    pav:previousVersion IRI,
+    dct:source or pav:retrievedFrom or prov:wasDerivedFrom or pav:createdWith IRI,
+    dcat:landingPage IRI?,
+    dct:format IRI or xsd:String ,
+    dcat:accessURL IRI?,
+    dcat:downloadURL IRI,
+    void:dataDump IRI,
+    void:triples xsd:integer,
+    void:entities xsd:integer,
+    void:distinctSubjects xsd:integer,
+    void:properties xsd:integer,
+    void:distinctObjects xsd:integer,
+    void:classPartition IRI,
+    void:classPartition IRI,
+    void:classPartition IRI?,
+    void:propertyPartition IRI?,
+    void:propertyPartition IRI?,
+    void:propertyPartition IRI?,
+    void:propertyPartition IRI?,
+    void:propertyPartition IRI?,
+    void:subset IRI?,
+}
