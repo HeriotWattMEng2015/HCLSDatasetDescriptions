@@ -1,44 +1,84 @@
 <SummaryLevelShape>{
-    rdf:type dctypes:Dataset,    ###
-    dct:title rdf:langString,    ###
-    dct:alternative rdf:langString?,    ###
-    dct:description rdf:langString,    ###
-    dct:publisher IRI,    ###
+    rdf:type dctypes:Dataset,
+    !rdf:type.,
+    dct:title rdf:langString,
+    dct:alternative rdf:langString?,
+    dct:description rdf:langString,
+    !dct:creator or pav:createdBy.,
+    !dct:contributor or pav:authoredBy or pav:curatedBy.,
+    !dct:created or pav:createdOn.,
+    !pav:authoredOn or pav:curatedOn.,
+    dct:publisher IRI,
+    !dct:issued.,
     foaf:page IRI,    ###SHOULD###
     schemaorg:logo IRI,    ###SHOULD###
-    dct:license IRI?,    ###
-    dct:rights rdf:langString?,    ###
-    dcat:theme IRI of type skos:Concept?,    ###
-    dcat:keyword xsd:string?,    ###
-    dct:references IRI?,    ###
-    cito:citesAsAuthority IRI?,    ###
-    rdfs:seeAlso IRI?,    ###
-    dct:hasPart IRI?,    ###
-    idot:preferredPrefix xsd:string?,    ###
-    idot:alternatePrefix xsd:string?,    ###
-    pav:hasCurrentVersion IRI?,    ###
+    dct:license IRI?,
+    dct:rights rdf:langString?,
+    !dct:language.,
+    dcat:theme IRI of type skos:Concept?,
+    dcat:keyword xsd:string?,
+    !void:vocabulary.,
+    !dct:conformsTo.,
+    dct:references IRI?,
+    cito:citesAsAuthority IRI?,
+    rdfs:seeAlso IRI?,
+    dct:hasPart IRI?,
+    idot:preferredPrefix xsd:string?,
+    idot:alternatePrefix xsd:string?,
+    !idot:identifierPattern.,
+    !void:uriRegexPattern.,
+    !idot:accessPattern.,
+    !idot:exampleIdentifier.,
+    !void:exampleResource.,
+    !sio:has-data-item.,
+    !pav:version.,
+    !dct:isVersionOf.,
+    !pav:previousVersion.,
+    pav:hasCurrentVersion IRI?,
+    !dct:source or pav:retrievedFrom or prov:wasDerivedFrom or pav:createdWith.,
     dct:accrualPeriodicity IRI of type dctypes:Frequency,    ###SHOULD###
-    dcat:accessURL IRI?,    ###
+    !dcat:distribution.,
+    !dcat:landingPage.,
+    !dct:format.,
+    dcat:accessURL IRI?,
+    !dcat:downloadURL.,
+    !void:dataDump.,
     void:sparqlEndpoint IRI,    ###SHOULD###
+    !void:triples.,
+    !void:entities.,
+    !void:distinctSubjects.,
+    !void:properties.,
+    !void:distinctObjects.,
+    !void:classPartition.,
+    !void:classPartition.,
+    !void:classPartition.,
+    !void:propertyPartition.,
+    !void:propertyPartition.,
+    !void:propertyPartition.,
+    !void:propertyPartition.,
+    !void:propertyPartition.,
+    !void:subset.,
 }
 <VersionLevelShape>{
     rdf:type dctypes:Dataset,
+    !rdf:type.,
     dct:title rdf:langString,
     dct:alternative rdf:langString?,
     dct:description rdf:langString,
     dct:creator or pav:createdBy IRI,
     dct:contributor or pav:authoredBy or pav:curatedBy IRI?,
-    dct:created or pav:createdOn rdfs:Literal encoded using the relevant ISO 8601 Date and Time compliant string and typed using the appropriate XML Schema datatype,
+    dct:created or pav:createdOn rdfs:Literal encoded using the relevant ISO 8601 Date and Time compliant string and typed using the appropriate XML Schema datatype,    ###SHOULD###
     pav:authoredOn or pav:curatedOn xsd:dateTime, xsd:date, xsd:gYearMonth, or xsd:gYear?,
     dct:publisher IRI,
-    dct:issued rdfs:Literal encoded using the relevant ISO 8601 Date and Time compliant string and typed using the appropriate XML Schema datatype,
-    foaf:page IRI,
-    schemaorg:logo IRI,
-    dct:license IRI,
+    dct:issued rdfs:Literal encoded using the relevant ISO 8601 Date and Time compliant string and typed using the appropriate XML Schema datatype,    ###SHOULD###
+    foaf:page IRI,    ###SHOULD###
+    schemaorg:logo IRI,    ###SHOULD###
+    dct:license IRI,    ###SHOULD###
     dct:rights rdf:langString?,
-    dct:language http://lexvo.org/id/iso639-3/{tag},
+    dct:language http://lexvo.org/id/iso639-3/{tag},    ###SHOULD###
     dcat:theme IRI of type skos:Concept?,
     dcat:keyword xsd:string?,
+    !void:vocabulary.,
     dct:conformsTo IRI?,
     dct:references IRI?,
     cito:citesAsAuthority IRI?,
@@ -46,61 +86,93 @@
     dct:hasPart IRI?,
     idot:preferredPrefix xsd:string?,
     idot:alternatePrefix xsd:string?,
+    !idot:identifierPattern.,
+    !void:uriRegexPattern.,
+    !idot:accessPattern.,
+    !idot:exampleIdentifier.,
+    !void:exampleResource.,
+    !sio:has-data-item.,
     pav:version xsd:string,
     dct:isVersionOf IRI,
-    pav:previousVersion IRI,
-    dct:source or pav:retrievedFrom or prov:wasDerivedFrom or pav:createdWith IRI,
-    dcat:distribution IRI of Distribution Level description,
+    pav:previousVersion IRI,    ###SHOULD###
+    !pav:hasCurrentVersion.,
+    dct:source or pav:retrievedFrom or prov:wasDerivedFrom or pav:createdWith IRI,    ###SHOULD###
+    !dct:accrualPeriodicity.,
+    dcat:distribution IRI of Distribution Level description,    ###SHOULD###
     dcat:landingPage IRI?,
+    !dct:format.,
     dcat:accessURL IRI?,
+    !dcat:downloadURL.,
+    !void:dataDump.,
+    !void:sparqlEndpoint .,    ###SHOULD NOT###
+    !void:triples.,
+    !void:entities.,
+    !void:distinctSubjects.,
+    !void:properties.,
+    !void:distinctObjects.,
+    !void:classPartition.,
+    !void:classPartition.,
+    !void:classPartition.,
+    !void:propertyPartition.,
+    !void:propertyPartition.,
+    !void:propertyPartition.,
+    !void:propertyPartition.,
+    !void:propertyPartition.,
+    !void:subset.,
 }
 <DistributionLevelShape>{
-    rdf:type dctypes:Dataset,
+    rdf:type dctypes:Dataset,    ###SHOULD###
     rdf:type void:Dataset or dcat:Distribution,
     dct:title rdf:langString,
     dct:alternative rdf:langString?,
     dct:description rdf:langString,
     dct:creator or pav:createdBy IRI,
     dct:contributor or pav:authoredBy or pav:curatedBy IRI?,
-    dct:created or pav:createdOn rdfs:Literal encoded using the relevant ISO 8601 Date and Time compliant string and typed using the appropriate XML Schema datatype,
+    dct:created or pav:createdOn rdfs:Literal encoded using the relevant ISO 8601 Date and Time compliant string and typed using the appropriate XML Schema datatype,    ###SHOULD###
     pav:authoredOn or pav:curatedOn xsd:dateTime, xsd:date, xsd:gYearMonth, or xsd:gYear?,
     dct:publisher IRI,
-    dct:issued rdfs:Literal encoded using the relevant ISO 8601 Date and Time compliant string and typed using the appropriate XML Schema datatype,
-    foaf:page IRI,
-    schemaorg:logo IRI,
+    dct:issued rdfs:Literal encoded using the relevant ISO 8601 Date and Time compliant string and typed using the appropriate XML Schema datatype,    ###SHOULD###
+    foaf:page IRI,    ###SHOULD###
+    schemaorg:logo IRI,    ###SHOULD###
     dct:license IRI,
     dct:rights rdf:langString?,
-    dct:language http://lexvo.org/id/iso639-3/{tag},
+    dct:language http://lexvo.org/id/iso639-3/{tag},    ###SHOULD###
     dcat:theme IRI of type skos:Concept?,
     dcat:keyword xsd:string?,
-    void:vocabulary IRI,
-    dct:conformsTo IRI,
+    void:vocabulary IRI,    ###SHOULD###
+    dct:conformsTo IRI,    ###SHOULD###
     dct:references IRI?,
     cito:citesAsAuthority IRI?,
     rdfs:seeAlso IRI?,
+    !dct:hasPart.,
     idot:preferredPrefix xsd:string?,
     idot:alternatePrefix xsd:string?,
     idot:identifierPattern xsd:string?,
     void:uriRegexPattern xsd:string?,
     idot:accessPattern idot:AccessPattern?,
-    idot:exampleIdentifier xsd:string,
-    void:exampleResource IRI,
+    idot:exampleIdentifier xsd:string,    ###SHOULD###
+    void:exampleResource IRI,    ###SHOULD###
     sio:has-data-item IRI?,
-    pav:version xsd:string,
-    pav:previousVersion IRI,
-    dct:source or pav:retrievedFrom or prov:wasDerivedFrom or pav:createdWith IRI,
+    pav:version xsd:string,    ###SHOULD###
+    !dct:isVersionOf.,
+    pav:previousVersion IRI,    ###SHOULD###
+    !pav:hasCurrentVersion.,
+    dct:source or pav:retrievedFrom or prov:wasDerivedFrom or pav:createdWith IRI,    ###SHOULD###
+    !dct:accrualPeriodicity.,
+    !dcat:distribution.,
     dcat:landingPage IRI?,
     dct:format IRI or xsd:String ,
     dcat:accessURL IRI?,
-    dcat:downloadURL IRI,
-    void:dataDump IRI,
-    void:triples xsd:integer,
-    void:entities xsd:integer,
-    void:distinctSubjects xsd:integer,
-    void:properties xsd:integer,
-    void:distinctObjects xsd:integer,
-    void:classPartition IRI,
-    void:classPartition IRI,
+    dcat:downloadURL IRI,    ###SHOULD###
+    void:dataDump IRI,    ###SHOULD###
+    !void:sparqlEndpoint .,    ###SHOULD NOT###
+    void:triples xsd:integer,    ###SHOULD###
+    void:entities xsd:integer,    ###SHOULD###
+    void:distinctSubjects xsd:integer,    ###SHOULD###
+    void:properties xsd:integer,    ###SHOULD###
+    void:distinctObjects xsd:integer,    ###SHOULD###
+    void:classPartition IRI,    ###SHOULD###
+    void:classPartition IRI,    ###SHOULD###
     void:classPartition IRI?,
     void:propertyPartition IRI?,
     void:propertyPartition IRI?,
